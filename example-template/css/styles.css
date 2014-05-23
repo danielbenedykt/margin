@@ -115,7 +115,6 @@ p {
 
 body {
   padding: 30px;
-  font-family: Avenir LT Std;
   text-rendering: optimizeLegibility;
   font-size: 0.60018rem;
   line-height: 0.80023rem;
@@ -132,7 +131,6 @@ body {
 }
 
 h1 {
-  font-family: Montserrat;
   text-transform: uppercase;
   font-size: 2.00058rem;
   margin: 0;
