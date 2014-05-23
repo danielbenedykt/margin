@@ -25,3 +25,4 @@ Files required
 `index.html` is loaded in Phantom so you can use CSS as normal.
 
 `example-template` is a folder with an example in - rename it to `template` to use it.
+
