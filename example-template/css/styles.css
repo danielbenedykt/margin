@@ -1,0 +1,236 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #333333;
+  background-color: #fff;
+}
+
+h1,
+h2 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1,
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+}
+
+th {
+  text-align: left;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@media print {
+  * {
+    background: #ffdd21 !important;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  padding: 30px;
+  font-family: Avenir LT Std;
+  text-rendering: optimizeLegibility;
+  font-size: 0.60018rem;
+  line-height: 0.80023rem;
+}
+
+.wrapper {
+  position: relative;
+  width: 49.79232rem;
+  height: 70.42057rem;
+  background-color: #ffdd21;
+  margin: auto;
+  overflow: hidden;
+  padding: 4.00117rem;
+}
+
+h1 {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-size: 2.00058rem;
+  margin: 0;
+  margin-bottom: 4.00117rem;
+}
+
+.invoice-fao {
+  float: left;
+  width: 10.20298rem;
+  margin-bottom: 4.00117rem;
+}
+
+.invoice-fao span {
+  font-weight: 700;
+}
+
+table {
+  font-size: 0.60018rem;
+  clear: both;
+  position: relative;
+  left: 10.20298rem;
+  width: 35.58817rem;
+  margin-bottom: 4.00117rem;
+}
+
+table thead {
+  font-size: 0.80023rem;
+  font-weight: 700;
+  border-bottom-width: 0.10003rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+table thead th.item {
+  width: 20.40596rem;
+}
+
+table tbody tr {
+  border-bottom-width: 0.05001rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+table tfoot {
+  font-size: 0.80023rem;
+  font-weight: 700;
+  border-top-width: 0.10003rem;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+table tr td {
+  padding: 0.40012rem 0 0.32009rem;
+}
+
+.payment-terms {
+  font-size: 0.80023rem;
+  font-weight: 700;
+  margin-bottom: 2.00058rem;
+}
+
+.invoice-thanks {
+  font-size: 1.20035rem;
+  line-height: 1.20035rem;
+  font-weight: 700;
+}
+
+.invoice-thanks span {
+  font-size: 0.80023rem;
+}
+
+.details-block {
+  position: absolute;
+  bottom: 4.00117rem;
+}
+
+h2 {
+  font-size: 0.60018rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.company-details {
+  width: 20.40596rem;
+  float: left;
+}
+
+.company-number {
+  width: 20.40596rem;
+  float: left;
+}
+
+.company-number span {
+  width: 8.00234rem;
+  display: inline-block;
+}
+
+.payment-details {
+  margin-bottom: 2.00058rem;
+}
+

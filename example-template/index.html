@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Invoice</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+  	<div class="wrapper">
+	  	<h1>TopHat Design</h1>
+	  	<p class="invoice-fao">
+	  		FAO: <span>{{client_name}}</span><br>
+	  		{{{client_address}}}
+	  	</p>
+	  	<p class="invoice-details">
+	  		VAT invoice #{{invoice_number}}<br>
+			{{invoice_date}}
+	  	</p>
+	  	<table class="invoice-items">
+	  		<thead>
+	  			<tr>
+	  				<th class="item">Item</th>
+	  				<th>Cost</th>
+	  			</tr>
+	  		</thead>
+	  		<tbody>
+	  		  {{#invoice_lines}}
+	  			<tr>
+	  				<td>{{description}}</td>
+	  				<td>&pound;{{cost}}</td>
+	  			</tr>
+	  			{{/invoice_lines}}
+	  			<tr>
+	  				<td>Subtotal</td>
+	  				<td>&pound;{{subtotal}}</td>
+	  			</tr>
+	  			<tr>
+	  				<td>VAT 20%</td>
+	  				<td>&pound;{{vat}}</td>
+	  			</tr>
+	  		</tbody>
+	  		<tfoot>
+	  			<tr>
+	  				<td>Total</td>
+	  				<td>&pound;{{total}}</td>
+	  			</tr>
+	  		</tfoot>
+	  	</table>
+	  	<p class="payment-terms">Payment would be appreciated within 7 days of receipt of this invoice.</p>
+	  	<p class="invoice-thanks">
+	  		Many Thanks,<br>
+	  		<span>The Team at TopHat</span>
+	  	</p>
+	  	<div class="details-block">
+	  		<h2>Payment Details</h2>
+	  		<p class="payment-details">
+	  			Please make payments by bank transfer to:<br>
+	  			That National Bank, sort code 12-34-56, account number 12345678<br>
+	  			Please quote invoice number as the payment reference.<br>
+	  		</p>
+	  		<p class="company-details">
+	  			TopHat Design Ltd is registered at:<br>Unit 56, Office Park, Fullbrighton<br>OX27 5PR, United Kingdom.
+	  		</p>
+	  		<p class="company-number">
+	  			<span>Company number: </span>0123456<br>
+	  			<span>Registered VAT number: </span>123 4567 89
+	  		</p>
+	  	</div>
+  	</div>
+  </body>
+</html>

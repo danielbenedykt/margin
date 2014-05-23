@@ -1,0 +1,26 @@
+{
+  "name": "margin",
+  "version": "0.1.0",
+  "description": "A tool to help you write invoices using HTML",
+  "author": "Penrose <contact@penrosestudio.com>",
+  "contributors": [
+    {
+      "name": "Foo Bar",
+      "email": "foo.bar@example.com"
+    }
+  ],
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/penrosestudio/margin"
+  },
+  "bugs": {
+    "url": "https://github.com/penrosestudio/margin/issues"
+  },
+  "dependencies": {
+    "handlebars": "~2.0.0-alpha.4",
+    "phantom": "~0.6.3"
+  },
+  "private": true,
+  "license": "MIT"
+}

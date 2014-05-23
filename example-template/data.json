@@ -1,0 +1,16 @@
+{
+  "invoice_number": "0008",
+  "invoice_date": "23 May 2014",
+  "client_name": "Mr Simon Smith",
+  "client_address": "43 Garden Grove, Shacklewell, Herts., HE4 0RT",
+  "invoice_lines": [{
+    "description": "a bouncy ball",
+    "cost": "300"
+  }, {
+    "description": "sunny shades",
+    "cost": "600"
+  }],
+  "subtotal": "900",
+  "vat": "180",
+  "total": "1080"
+}
