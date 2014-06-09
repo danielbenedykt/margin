@@ -44,11 +44,9 @@ phantom.create(function(ph){
                 page.render('pages.pdf', function(){
                   console.log('Page Rendered');
                   ph.exit();
-                  /*
-fs.unlink(__dirname+"/"+templateFolder+"/temp.html", function(err) {
+                  fs.unlink(__dirname+"/"+templateFolder+"/temp.html", function(err) {
                     console.log('Finished');
                   });
-*/
                 });        
               });
             });
