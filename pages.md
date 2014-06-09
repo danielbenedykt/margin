@@ -29,11 +29,6 @@ Conversion process:
 * `pages.md` is converted into HTML, styled with `pdf.css`
 * `cover.html` and the output from step2 are rendered into a single PDF called `pages.pdf`
 
-Styling & CSS classes
----------------------
-
-The HTML created from `pages.md` will be wrapped in a `div.wrapper`.
-
 Example template
 ----------------
 
