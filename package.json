@@ -1,7 +1,7 @@
 {
   "name": "margin",
-  "version": "0.1.0",
-  "description": "A tool to help you write invoices using HTML",
+  "version": "0.1.1",
+  "description": "A tool to help you write documents using HTML & CSS",
   "author": "Penrose <contact@penrosestudio.com>",
   "contributors": [
     {
