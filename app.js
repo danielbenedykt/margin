@@ -26,10 +26,8 @@ var createPdfFromHTML = function(pdfPath, html, callback) {
           page.set('viewportSize', {width:1280,height:1800}, function(result) {
             // create the PDF
             page.render(pdfPath, function(){
-              console.log('Page Rendered');
               ph.exit();
               fs.unlink(tempFilename, function(err) {
-                console.log('Finished');
                 if(callback) {
                   callback(err);
                 }
