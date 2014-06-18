@@ -19,24 +19,28 @@ var createPdfFromHTML = function(pdfPath, html, callback) {
   }
   // write the HTML to a temporary file
   fs.writeFile(tempFilename, html, function() {
-    // open the temp file in phantom
-    page.open(tempFilename, function(status) {
-      page.set('viewportSize', {width:1280,height:1800}, function(result) {
-        // create the PDF
-        page.render(pdfPath, function(){
-          console.log('Page Rendered');
-          ph.exit();
-          fs.unlink(tempFilename, function(err) {
-            console.log('Finished');
-            if(callback) {
-              callback(err);
-            }
+    phantom.create(function(ph){
+      ph.createPage(function(page) {
+        // open the temp file in phantom
+        page.open(tempFilename, function(status) {
+          page.set('viewportSize', {width:1280,height:1800}, function(result) {
+            // create the PDF
+            page.render(pdfPath, function(){
+              console.log('Page Rendered');
+              ph.exit();
+              fs.unlink(tempFilename, function(err) {
+                console.log('Finished');
+                if(callback) {
+                  callback(err);
+                }
+              });
+            });
           });
         });
       });
     });
   });
-});
+};
 
 /*
  * Create a multi-page PDF with a cover template
@@ -54,32 +58,28 @@ var createPdfFromFolder = function(folderPath, pdfPath, callback) {
   var coverTemplateFilename = path.join(folderPath,"template/cover.html"),
     dataJSONFileName = path.join(folderPath,"data.json"),
     pagesFileName = path.join(folderPath,"pages.md");
-    
-  phantom.create(function(ph){
-    ph.createPage(function(page) {
-      // read in the cover template
-      fs.readFile(coverTemplateFilename, readOptions, function(err, source) {
-        var template = handlebars.compile(source);
-        // read in the JSON data for the cover
-        fs.readFile(dataJSONFileName, readOptions, function(err, data) {
-          var jsonData = JSON.parse(data),
-            result = template(jsonData);
-          // read in the markdown document
-          fs.readFile(pagesFileName, readOptions, function(err, data) {
-            // convert markdown to HTML
-            var pagesHTML = marked(data),
-              bits = result.split('</body>'),
-              htmlForRenderingToPDF;
-            // wrap pages HTML in a wrapper and insert before the end of the body
-            bits.splice(1,0,'<div class="wrapper">',pagesHTML,'</div></body>');
-            htmlForRenderingToPDF = bits.join("");
-            // create the PDF
-            createPdfFromHTML(pdfPath, htmlForRenderingToPDF, callback);
-          });
+
+    // read in the cover template
+    fs.readFile(coverTemplateFilename, readOptions, function(err, source) {
+      var template = handlebars.compile(source);
+      // read in the JSON data for the cover
+      fs.readFile(dataJSONFileName, readOptions, function(err, data) {
+        var jsonData = JSON.parse(data),
+          result = template(jsonData);
+        // read in the markdown document
+        fs.readFile(pagesFileName, readOptions, function(err, data) {
+          // convert markdown to HTML
+          var pagesHTML = marked(data),
+            bits = result.split('</body>'),
+            htmlForRenderingToPDF;
+          // wrap pages HTML in a wrapper and insert before the end of the body
+          bits.splice(1,0,'<div class="wrapper">',pagesHTML,'</div></body>');
+          htmlForRenderingToPDF = bits.join("");
+          // create the PDF
+          createPdfFromHTML(pdfPath, htmlForRenderingToPDF, callback);
         });
       });
-    });
-  });  
+    });  
 };
 
 module.exports = {
