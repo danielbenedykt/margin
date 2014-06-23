@@ -1,15 +1,19 @@
 {
   "name": "margin",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "A tool to help you write documents using HTML & CSS",
   "author": "Penrose <contact@penrosestudio.com>",
   "contributors": [
     {
-      "name": "Foo Bar",
-      "email": "foo.bar@example.com"
+      "name": "Jonathan Lister",
+      "email": "jonathan@penrosestudio.com"
     }
   ],
-  "main": "app.js",
+  "main": "margin.js",
+  "bin": {
+    "margin": "main.js"
+  },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/penrosestudio/margin"

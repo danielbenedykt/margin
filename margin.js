@@ -8,11 +8,10 @@ var phantom = require('phantom'),
   marked = require('marked'),
   readOptions = { "encoding": "utf-8" };
 
-
 var createPdfFromHTML = function(pdfPath, html, callback) {
   var tempFilename = path.join(__dirname,"marginTemporaryHTMLFile.html");
   if(!pdfPath) {
-    pdfPath = path.join(folderPath,"pages.pdf");
+    pdfPath = path.join(".","document.pdf");
   }
   if(!html) {
     html = '';
@@ -29,7 +28,7 @@ var createPdfFromHTML = function(pdfPath, html, callback) {
               ph.exit();
               fs.unlink(tempFilename, function(err) {
                 if(callback) {
-                  callback(err);
+                  callback(err, pdfPath);
                 }
               });
             });
